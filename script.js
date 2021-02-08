@@ -5,7 +5,7 @@ document.getElementById('search').addEventListener('keypress', function (e) {
 });
 
 function fetchWeather( city ) {
-  const key = config.api_key;
+  const key = secrets.API_KEY;
   fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key)  
   .then(function(resp) { return resp.json() })
   .then(function(data) {
