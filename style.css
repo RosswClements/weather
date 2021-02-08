@@ -1,11 +1,19 @@
 body {
-    /* background-color: skyblue; */
     margin: 0;
     padding: 0;
     border: 0;
     text-align: center; 
     font-family:sans-serif; 
     font-weight: lighter;
+    color: white;
+    text-shadow: 2px 2px slategray;
+    /* Default background is clear sky */
+    background: url(img/clear.jpg); /* Photo by Cate Bligh on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;    
+    transition: background 1s ease-in-out;
 }
 
 .container1 {
@@ -22,10 +30,65 @@ body {
     margin-top: 8px;
     margin-right: 16px;
     font-size: 70px;
-    text-shadow: 1px 1px slategray;
+    text-shadow: 2px 2px slategray;
+    color: white;
     outline: none;
     /* text-align: center; */
-    
-    /* background-color: transparent; */
+    background: transparent;
 
   }
+
+  ::placeholder {
+    color: white;
+  }
+
+  body.snow {
+    background: url(img/snow.jpg); /* Photo by Wladislaw Sokolowskij on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body.clouds {
+    background: url(img/cloudy.jpg); /* Photo by Daria Nepriakhina on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+
+}
+
+body.rain {
+    background: url(img/rain.jpg); /* Photo by Gabriele Diwald on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+
+}
+
+body.storm {
+    background: url(img/storm.jpg); /* Photo by Eugene Triguba on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body.fog {
+    background: url(img/fog.jpg); /* Photo by Patrick Hendry on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+}
+
+body.clear {
+    background: url(img/clear.jpg); /* Photo by Cate Bligh on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;  
+}
+

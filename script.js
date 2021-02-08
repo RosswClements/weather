@@ -12,7 +12,7 @@ function fetchWeather( city ) {
     showWeather(data);
   })
   .catch(function() {
-    console.log("Oh no! Something went wrong.")
+    document.getElementById('weather').innerHTML = "Oh no! Something went wrong. Try again?";
   });
 }
 
@@ -20,7 +20,38 @@ function showWeather( d ) {
   let current = Math.round(parseFloat(d.main.temp)-273.15);
   let high = Math.round(parseFloat(d.main.temp_max)-273.15);
   let low = Math.round(parseFloat(d.main.temp_min)-273.15);
+  let description = d.weather[0].description;
 
-  document.getElementById('weather').innerHTML = 'It is currently ' + current + '&deg; and ' + d.weather[0].description + ". High: " + high + "&deg; Low: " + low + "&deg;" ;
+  document.getElementById('weather').innerHTML = 'It is currently ' + current + '&deg; with ' + description + ". High: " + high + "&deg; Low: " + low + "&deg;" ;
 
+  if( description.indexOf('snow') > 0 || description == 'snow') {
+  	document.body.className = 'snow';
+  }
+  else if( description.indexOf('sleet') > 0 || description == 'sleet') {
+  	document.body.className = 'snow';
+  }
+  else if( description.indexOf('clear') > 0 || description == 'clear' ) {
+  	document.body.className = 'clear';
+  }
+  else if( description.indexOf('clouds') > 0 || description == 'clouds' ) {
+  	document.body.className = 'clouds';
+  }
+  else if( description.indexOf('rain') > 0 || description == 'rain') {
+  	document.body.className = 'rain';
+  }
+  else if( description.indexOf('drizzle') > 0 || description == 'drizzle' ) {
+  	document.body.className = 'rain';
+  }
+  else if( description.indexOf('storm') > 0 || description == 'storm' ) {
+  	document.body.className = 'storm';
+  }
+  else if( description.indexOf('fog') > 0 || description == 'fog' ) {
+  	document.body.className = 'fog';
+  }
+  else if( description.indexOf('mist') > 0 || description == 'mist' ) {
+  	document.body.className = 'fog';
+  }
+  else{
+    document.body.className = 'clear';
+  }
 }
