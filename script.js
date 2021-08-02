@@ -25,33 +25,33 @@ function showWeather( d ) {
   document.getElementById('weather').innerHTML = 'It is currently ' + current + '&deg; with ' + description + ". High: " + high + "&deg; Low: " + low + "&deg;" ;
 
   if( description.indexOf('snow') > 0 || description == 'snow') {
-  	document.body.className = 'snow';
+  	document.documentElement.className = 'snow';
   }
   else if( description.indexOf('sleet') > 0 || description == 'sleet') {
-  	document.body.className = 'snow';
+  	document.documentElement.className = 'snow';
   }
   else if( description.indexOf('clear') > 0 || description == 'clear' ) {
-  	document.body.className = 'clear';
+  	document.documentElement.className = 'clear';
   }
   else if( description.indexOf('clouds') > 0 || description == 'clouds' ) {
-  	document.body.className = 'clouds';
+  	document.documentElement.className = 'clouds';
   }
   else if( description.indexOf('rain') > 0 || description == 'rain') {
-  	document.body.className = 'rain';
+  	document.documentElement.className = 'rain';
   }
   else if( description.indexOf('drizzle') > 0 || description == 'drizzle' ) {
-  	document.body.className = 'rain';
+  	document.documentElement.className = 'rain';
   }
   else if( description.indexOf('storm') > 0 || description == 'storm' ) {
-  	document.body.className = 'storm';
+  	document.documentElement.className = 'storm';
   }
   else if( description.indexOf('fog') > 0 || description == 'fog' ) {
-  	document.body.className = 'fog';
+  	document.documentElement.className = 'fog';
   }
   else if( description.indexOf('mist') > 0 || description == 'mist' ) {
-  	document.body.className = 'fog';
+  	document.documentElement.className = 'fog';
   }
   else{
-    document.body.className = 'clear';
+    document.documentElement.className = 'clear';
   }
 }

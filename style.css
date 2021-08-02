@@ -7,12 +7,16 @@ body {
     font-weight: lighter;
     color: white;
     text-shadow: 2px 2px slategray;
+
+}
+
+html{
     /* Default background is clear sky */
     background: url(img/clear.jpg); /* Photo by Cate Bligh on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: webkit-fill-available;    
+    height: 100vh;    
     transition: background 1s ease-in-out;
 }
 
@@ -36,12 +40,13 @@ h2 {
     border: none;
     margin-top: 8px;
     margin-right: 16px;
-    font-size: 3.8rem;
+    font-size: 2rem;
     text-shadow: 2px 2px slategray;
     color: white;
     outline: none;
     /* text-align: center; */
     background: transparent;
+    width: 75%;
 
   }
 
@@ -49,7 +54,7 @@ h2 {
     color: white;
   }
 
-  body.snow {
+  html.snow {
     background: url(img/snow.jpg); /* Photo by Wladislaw Sokolowskij on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,7 +62,7 @@ h2 {
     height: 100vh;
 }
 
-body.clouds {
+html.clouds {
     background: url(img/cloudy.jpg); /* Photo by Daria Nepriakhina on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +71,7 @@ body.clouds {
 
 }
 
-body.rain {
+html.rain {
     background: url(img/rain.jpg); /* Photo by Gabriele Diwald on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +80,7 @@ body.rain {
 
 }
 
-body.storm {
+html.storm {
     background: url(img/storm.jpg); /* Photo by Eugene Triguba on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,7 +96,7 @@ body.fog {
     height: 100vh;
 }
 
-body.clear {
+html.clear {
     background: url(img/clear.jpg); /* Photo by Cate Bligh on Unsplash */
     background-repeat: no-repeat;
     background-size: cover;
